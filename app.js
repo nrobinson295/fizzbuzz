@@ -1,14 +1,21 @@
 $(document).ready(function() {
+	function showToPage(message) {
+		$('body').append('<p>' + message + '</p>');
+	}
+
+
 	for (i = 1; i <= 100; i++) {
 
 		if (i % 3 === 0 && i % 5 === 0){
-			console.log('fizzbuzz');
+			showToPage('FizzBuzz');
 		}else if (i % 3 === 0){
-			console.log('fizz');
+			showToPage('Fizz');
 		}else if (i % 5 === 0){
-			console.log('buzz');
+			showToPage('Buzz');
 		}else {
-			console.log(i);
+			showToPage(i);
 		}
 	}
 });
+
+
